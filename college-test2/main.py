@@ -54,7 +54,7 @@ class deepLearn:
 
 #设置输入层隐藏层输出层
 input_nodes = 13
-hidden_nodes = 1200
+hidden_nodes = 2000
 output_nodes = 10
 
 #设置学习率
@@ -81,7 +81,7 @@ test=imputer.fit_transform(test)
 training_data_list = train.tolist()
 test_data_list = test.tolist()
 
-epochs = 10 #循环次数
+epochs = 15 #循环次数
 for e in range(epochs):
     for all_values in training_data_list:
         inputs = all_values[0:2]
@@ -110,7 +110,7 @@ for all_values in test_data_list:
     pass
 
 #写入csv文件
-with open('123.csv','w') as jg:
+with open('1234.csv','w') as jg:
     writer = csv.writer(jg,lineterminator='\n')
     writer.writerow(['id','y'])
     for item in result:
